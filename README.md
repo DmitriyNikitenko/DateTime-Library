@@ -1,7 +1,5 @@
 # DateTime library
 
-### (The use of this code for passing tests provided to first-year students of St. Petersburg State University is prohibited.)!!!
-
 Implement classes to represent dates and times.
 
 ## Implementation requirements
