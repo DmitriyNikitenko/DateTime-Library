@@ -24,8 +24,9 @@ jobs:
           make
           !(grep -qwRE --include=*.{cc,cpp,h} '<vector>|<list>|<algorithm>|<stack>|<queue>|<deque>|<set>|<map>' ./* ) &&  (echo "Build...") || (echo "Forbidden STL containers" && exit 9)
 
-      - name: Autograding
-        uses: amcp-pit/autograding@v1
+      - name: Run tests
+        run: |
+          timeout 5 ./datetime
 
       - name: Install
         run: sudo apt-get update && sudo apt-get install -y valgrind
